@@ -1,0 +1,226 @@
+body{
+    background-color: #1e272e;
+    padding: 0;
+    margin: 0;
+    font-family: cursive;
+}
+
+.container{
+    height: 280px;
+    max-width: 300px;
+    position: absolute;
+    margin: auto;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    }
+.cake{
+    height: 70px;
+    width: 180px;
+    background-color: #fcf18e;
+    position: absolute;
+}
+.c1{
+    bottom: 0;
+    left:60px;
+}
+.cream{
+    background-color: #fa406b;
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    top:30px;
+}
+.icing{
+    position: relative;
+}
+.icing>div{
+    background-color: #fbd028;
+    height: 12.5px;
+    width: 26px;
+    border-radius: 0 0 26px 26px;
+    position: absolute;
+}
+.icing>div:nth-child(1){
+    left:-2px;
+}
+.icing>div:nth-child(2){
+    left:26px;
+}
+.icing>div:nth-child(3){
+    left:52px;
+}
+.icing>div:nth-child(4){
+    left:78px;
+}
+.icing>div:nth-child(5){
+    left:104px;
+}
+.icing>div:nth-child(6){
+    left:130px;
+}
+.icing>div:nth-child(7){
+    left:156px;
+}
+.cherries>div{
+    background-color: #f7174c;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: absolute;
+    top:-18px;
+}
+.cherries>div:nth-child(1){
+    left:8px;
+}
+.cherries>div:nth-child(2){
+    left:40px;
+}
+.cherries>div:nth-child(3){
+    left:70px;
+}
+.cherries>div:nth-child(4){
+    left:100px;
+}
+.cherries>div:nth-child(5){
+    left:130px;
+}
+.cherries>div:nth-child(6){
+    left:156px;
+}
+.c2{
+    transform:scale(0.8);
+    -webkit-transform:scale(0.8);
+    bottom: 62px;
+    left: 60px;
+    z-index: -1;
+}
+.c3{
+    transform: scale(0.6);
+    -webkit-transform: scale(0.6);
+    bottom: 110px;
+    left: 60px;
+    z-index: -2;
+}
+.candle{
+    background-color: #f8f8f8;
+    height: 70px;
+    width: 20px;
+    position: absolute;
+    z-index: -3;
+    bottom: 60px;
+    left: 80px;
+}
+.flame{
+    background-color: #fbb200;
+    height: 22px;
+    width: 22px;
+    border-radius: 0 50% 50% 50%;
+    position: absolute;
+    top: -22px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    box-shadow:0 0 15px 2px rgb(251, 178, 0,0.6);
+    animation: glow 2s infinite;
+    -webkit-animation: glow 2s infinite;
+}
+@keyframes glow{
+    50%{
+        box-shadow:0 0 2px 0 rgb(251, 178, 0,0.6);
+        top:-20.5px;
+    }
+}
+@-webkit-keyframes glow{
+    50%{
+        box-shadow:0 0 2px 0 rgb(251, 178, 0,0.9);
+        top:-20.5px;
+    }
+}
+@media screen and (min-width: 451px) {
+  a{
+    font-size: 25px;
+     padding:8px 12px 8px 12px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  a{
+    font-size: 18px;
+     padding:5px 8px 5px 8px;
+  }
+}
+.nameF
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 500px;
+    margin: auto;
+    color: white;
+    text-align: center;
+    font-family: cursive;
+}
+.GameBtn
+{
+    text-align: center;
+    color: white;
+    max-width: 500px;
+    margin: auto;
+}
+
+button {
+	background-color: rebeccapurple;
+    border-radius: 5px;
+    font-family: cursive;
+	box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.15);
+	border: none;
+	color: white;
+	cursor: pointer;
+	padding: 1rem 2rem;
+	position: relative;
+	transition: transform 0.1s linear, box-shadow 0.1s linear;
+	z-index: 10;
+}
+
+button:active {
+	transform: translate(4px, 4px);
+	box-shadow: 0 0 0 rebeccapurple;
+}
+
+button:focus {
+	outline: none;
+}
+
+.particle {
+	--x: 0;
+	--y: 0;
+	background-color: rebeccapurple;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 5px;
+	width: 5px;
+	z-index: -1;
+}
+
+.particle.move {
+	animation: move 1000ms linear forwards;
+}
+
+@keyframes move {
+	to {
+		transform: translate(var(--x), var(--y));
+	}
+	
+	95% {
+		opacity: 1;
+	}
+	
+	100% {
+		opacity: 0;
+	}
+}
